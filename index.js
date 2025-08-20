@@ -41,3 +41,10 @@ function sortAll() {
   }
   render();
 }
+
+function clear() {
+  bank = [];
+  odds = [];
+  evens = [];
+  render();
+}
