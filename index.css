@@ -2,3 +2,8 @@
   display: flex;
   gap: 10px;
 }
+
+span {
+  margin: 5px;
+  display: inline-block;
+}
