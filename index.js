@@ -46,7 +46,7 @@ function sortAll() {
 }
 
 //Function to clear all numbers
-function clear() {
+function clearAll() {
   bank = [];
   odds = [];
   evens = [];
@@ -117,7 +117,7 @@ function render() {
     <h3>Even Numbers (${evens.length})</h3>
     ${evensContent}
     
-    <button onclick="clear()">Clear All</button>
+    <button onclick="clearAll()">Clear All</button>
   `;
 
   // Event Listeners
