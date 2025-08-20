@@ -67,5 +67,10 @@ function render() {
         id="numberInput"
         placeholder="Enter a number"
         required
-        >`;
+        >
+        <button type="submit">Add Number</button>
+      </form>
+    </div>
+    
+    `;
 }
