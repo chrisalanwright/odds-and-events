@@ -56,10 +56,10 @@ function clear() {
 function render() {
   let app = document.getElementById("app");
 
+  // Text for when sections are empty
   let bankContent = "";
   let oddsContent = "";
   let evensContent = "";
-  let buttonDisabled = "";
 
   if (bank.length === 0) {
     bankContent = "<p>No numbers in bank</p>";
@@ -91,6 +91,7 @@ function render() {
     evensContent += "</div>";
   }
 
+  //HTML
   app.innerHTML = `
     <h1>Odds and Events</h1>
     
@@ -107,8 +108,8 @@ function render() {
     <h2>Number Bank (${bank.length})</h2>
     ${bankContent}
     
-    <button onclick="sortOne()" ${buttonDisabled}>Sort 1</button>
-    <button onclick="sortAll()" ${buttonDisabled}>Sort All</button>
+    <button onclick="sortOne()">Sort 1</button>
+    <button onclick="sortAll()">Sort All</button>
     
     <h3>Odd Numbers (${odds.length})</h3>
     ${oddsContent}
@@ -118,5 +119,16 @@ function render() {
     
     <button onclick="clear()">Clear All</button>
   `;
+
+  // Event Listeners
+  let form = document.getElementById("numberForm");
+  let input = document.getElementById("numberInput");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    addToBank(input.value);
+    input.value = "";
+  });
 }
+
 render();
