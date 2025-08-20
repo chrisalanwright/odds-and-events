@@ -52,3 +52,20 @@ function clear() {
   evens = [];
   render();
 }
+
+function render() {
+  let app = document.getElementById("app");
+
+  app.innerHTML = `
+  <div class="entireApp">
+    <h1>Odds and Events</h1>
+    
+    <div class="input">
+      <form id="numberForm">
+        <input
+        type="number"
+        id="numberInput"
+        placeholder="Enter a number"
+        required
+        >`;
+}
